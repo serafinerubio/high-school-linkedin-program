@@ -1,14 +1,17 @@
 window.onload = function() {
-    function processForm(e) {
-
-
-      e.preventDefault();
-
-      var data = document.getElementById("input").value;
-   
-
-
-    }
-var form = document.getElementById("myForm");
-form.addEventListener("submit", processForm);
-}
+ 
+ 
+    var form = document.getElementById("favColor");
+    
+    form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            var data = document.getElementById("input").value;
+            if(data===""){
+                alert("this is invalid");
+            } else {
+                console.log({"favColor":data})
+            } return false;
+          
+    });
+      
+ }
